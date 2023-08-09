@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cloth{
+    width: 279px;
+    height: 404px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.cloth > img{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+
+.clothes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+    position: relative;
+    top: 90px;
+}
+
+.clothes>* {
+    flex: 0 0 25%;
+}
