@@ -79,3 +79,12 @@ gap: 5px;
 	position:relative;
 	top:1px;
 }
+
+.close-button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}

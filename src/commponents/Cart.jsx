@@ -18,19 +18,22 @@ function Cart(){
     };
 
     const cartItems = (cartItem) => {
-        return (
-            <div className='container' key={cartItem.id}>
-                <button onClick={() => handleClose(cartItem)}></button>
-              
-                    <div className='item'>
-                        <img src={cartItem.image} alt={cartItem.title}/>
-                        <p className='title'>{cartItem.title}</p>
-                        <p className='price'>${cartItem.price}</p>
-                    </div>
 
+            return (
+                <div className='container' key={cartItem.id}>
+                <button className='close-button' onClick={() => handleClose(cartItem)}>X</button>
+                
+                <div className='item'>
+                <img src={cartItem.image} alt={cartItem.title}/>
+                <p className='title'>{cartItem.title}</p>
+                <p className='price'>${cartItem.price}</p>
+                <button>-</button><input type="text" value={1}/>  <button>+</button>
                 </div>
-
-        );
+                
+                </div>
+                
+                );
+            
     };
 
     const emptyCart = () => {
@@ -49,15 +52,27 @@ function Cart(){
         );
     };
 
+    const uniqueItems = Array.from(new Set(state)); // Convert state to Set to remove duplicates, then convert back to Array
+    
     return (
         <div className='cont'>
             <div className='cart-items'>
-            {state.length === 0 && emptyCart()}
-            {state.length !== 0 && state.map(cartItems)}
+                {uniqueItems.length === 0 ? emptyCart() : uniqueItems.map(cartItems)}
             </div>
-            {state.length !== 0 && button()}
+            {uniqueItems.length !== 0 && button()}
         </div>
     );
+
+    // return (
+    //     <div className='cont'>
+    //         <div className='cart-items'>
+    //         {state.length === 0 && emptyCart()}
+    //         {state.length !== 0 && state.map(cartItems)}
+    //         </div>
+    //         {state.length !== 0 && button()}
+    //     </div>
+    // );
+    
 };
 
 export default Cart;
