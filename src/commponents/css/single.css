@@ -54,9 +54,26 @@
 #container{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 
 .right{
     text-align: center;
+}
+
+.left{
+    max-height: 340px;
+    max-width: 300px;
+}
+
+.left > img{
+    height: 100%;
+}
+
+.back-button{
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 50px;
 }
