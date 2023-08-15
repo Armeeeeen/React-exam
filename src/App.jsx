@@ -17,7 +17,7 @@ import Buy from './commponents/Buy'
           <switch>
             <Routes>
               <Route exact path="/" Component={Home}/>
-              <Route exact path="/products" Component={Products}/>
+                <Route exact path="/products" Component={Products}/>
               <Route exact path="/clothes" Component={Clothes}/>
               <Route exact path="/blog" Component={Blog}/>
               <Route exact path="/products/:id" Component={Product}/>

@@ -7,10 +7,9 @@ import './css/cart.css'
 
 
 function Cart(){
-    const state = useSelector((state) => state.addItem);
+    let state = useSelector((state) => state.addItem);
     console.log(state);
     const dispatch = useDispatch();
-
        
         
     const handleClose = (item) => {
@@ -18,21 +17,22 @@ function Cart(){
     };
 
     const cartItems = (cartItem) => {
+                if(cartItem.id !== state.forEach((e)=> console.log(e.id))){
 
-            return (
-                <div className='container' key={cartItem.id}>
+                    return (
+                        <div className='container' key={cartItem.id}>
                 <button className='close-button' onClick={() => handleClose(cartItem)}>X</button>
                 
                 <div className='item'>
                 <img src={cartItem.image} alt={cartItem.title}/>
                 <p className='title'>{cartItem.title}</p>
                 <p className='price'>${cartItem.price}</p>
-                <button>-</button><input type="text" value={1}/>  <button>+</button>
                 </div>
                 
                 </div>
                 
                 );
+            }
             
     };
 

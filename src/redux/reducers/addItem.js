@@ -1,24 +1,19 @@
-const addItem = [];
+const initialState = [];
 
-const addItems = (state = addItem, action) => {
+const addItems = (state = initialState, action) => {
     switch (action.type) {
-        case "ADDITEM" : return [
-            ...state,
-            action.payload
-        ]
-        break;
+        case "ADDITEM":
+            if (!state.some((item) => item.id === action.payload.id)) {
+                return [...state, action.payload];
+            }
+            return state;
 
-        case "DELITEM" :
-            return state = state.filter((x)=>{
-                return x.id !== action.payload.id
-            })
-        break;
+        case "DELITEM":
+            return state.filter((item) => item.id !== action.payload.id);
 
-        default: return state;
-        break;
-
-        
+        default:
+            return state;
     }
-}
+};
 
 export default addItems;
