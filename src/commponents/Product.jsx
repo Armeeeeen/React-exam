@@ -29,16 +29,19 @@ function ProductDetails() {
     <div>
       <NavLink to={'/products'}><img src="https://www.freeiconspng.com/thumbs/return-button-png/back-undo-return-button-png-5.png" alt=""  className='back-button'/></NavLink>
     </div>
-      <h1>{product.title}</h1>
+      <h1 className='title'>{product.title}</h1>
     <div id='container'>
       <div className="left">
         <img src={product.image} alt={product.title} />
       </div>
       <div className="right">
-        <p id='info'><h3>Description:</h3> {product.description}</p>
+        <div className='information'>
+      <p id='info'><h3>Description:</h3> {product.description}</p>
         <p id='price'>${product.price}</p>
+        </div>
+        
       </div>
-        <NavLink to={`/products/${product.id}` }><button className="buy-button" onClick={()=> addProduct(product)}>Add to cart</button></NavLink>
+        <NavLink to={`/products/${product.id}` }><button id='single-button' className="buy-button" onClick={()=> addProduct(product)}>Add to cart</button></NavLink>
     </div>
   </div>
   );

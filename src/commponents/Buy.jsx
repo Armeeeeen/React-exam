@@ -49,8 +49,6 @@ const Buy = () => {
                         </ul>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
                     <div>
                         <h4>Billing address</h4>
                         <form>
@@ -84,8 +82,6 @@ const Buy = () => {
 
                             <hr />
                             <br/>
-                            <br/>
-                            <br/>
 
                             <h4>Payment</h4>
 
@@ -114,14 +110,6 @@ const Buy = () => {
                             </div>
 
                             <hr />
-
-
-    
-       
-    
-
-
-                       
                            
                             </form> 
                            

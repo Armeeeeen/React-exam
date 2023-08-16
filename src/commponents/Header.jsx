@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <div>
-      <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
+      <header className={`header`}>
         <NavLink className='logo' to='/'>
           <h2>MiniStore</h2>
         </NavLink>
@@ -25,7 +25,7 @@ function Header() {
           <div className='bar'></div>
           <div className='bar'></div>
         </div>
-        <ul className={`nav ${isMenuOpen ? 'open' : ''}`}>
+        <ul className={`nav${isMenuOpen ? '-open' : ''}`}>
           <li className='link'><NavLink to="/">Home</NavLink></li>
           <li className='link'><NavLink to="/products">Products</NavLink></li>
           <li className='link'><NavLink to="/clothes">Clothes</NavLink></li>
